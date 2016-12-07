@@ -281,26 +281,5 @@
 				margin-top:2.5rem;
 			}
 		}
-=======
-@import "_common";
-.background{
-	width:100%;
-	height:100%;
-	padding-bottom:150px;
-	position:relative;
-	.page{
-		width:100%;
-		height:100%;
-		background:$cl-tim url('../image/bg.png')no-repeat;
-		background-size:cover;
-	}
-	.footer{
-		position:absolute;
-		bottom:0;
-		left:0;
-		width:100%;
-		height:150px;
-		background:$cl-xam;
->>>>>>> origin/master
 	}
 }

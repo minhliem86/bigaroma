@@ -1,68 +1,68 @@
-<<<<<<< HEAD
 @import url(../fonts/avenir/style.css);
 @import url(../fonts/utmaptima/font.css);
 @import url(../fonts/utmaptima-bold/font.css);
 @import url(../fonts/utmavo/font.css);
-/* line 54, C:/xampp/htdocs/bigaroma/sass/_common.scss */
-=======
->>>>>>> origin/master
 * {
   margin: 0;
   padding: 0;
 }
 
-<<<<<<< HEAD
-/* line 55, C:/xampp/htdocs/bigaroma/sass/_common.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* line 56, C:/xampp/htdocs/bigaroma/sass/_common.scss */
-=======
-html, body {
-  width: 100;
-  height: 100%;
-}
-
->>>>>>> origin/master
 html {
   font-size: 62.5%;
 }
 
-<<<<<<< HEAD
-/* line 57, C:/xampp/htdocs/bigaroma/sass/_common.scss */
 h2, p {
-=======
-ul {
-  list-style: none;
-}
-
-h2, h3, p {
->>>>>>> origin/master
   margin: 0;
   padding: 0;
 }
 
-<<<<<<< HEAD
-/* line 61, C:/xampp/htdocs/bigaroma/sass/_common.scss */
 a:hover, a:focus {
   text-decoration: none !important;
   outline: none;
 }
 
-/* line 62, C:/xampp/htdocs/bigaroma/sass/_common.scss */
 ul {
   margin: 0;
 }
 
-/* line 3, C:/xampp/htdocs/bigaroma/sass/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+a:hover, a:focus {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
 .background {
   width: 100%;
   height: 100%;
 }
 
-/* line 6, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page {
   width: 100%;
   height: 86%;
@@ -70,21 +70,18 @@ ul {
   background-size: cover;
 }
 
-/* line 11, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content {
   width: 60%;
   float: left;
   height: 100%;
 }
 
-/* line 16, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* line 20, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content {
   position: absolute;
   width: 100%;
@@ -98,7 +95,6 @@ ul {
   color: white;
 }
 
-/* line 31, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.wrap-title {
   display: inline-block;
   padding: 0px 25px 10px 25px;
@@ -113,7 +109,6 @@ ul {
   margin-bottom: 3rem;
 }
 
-/* line 36, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.wrap-title h2.title {
   color: white;
   font-size: 3rem;
@@ -121,14 +116,12 @@ ul {
   line-height: 3rem;
 }
 
-/* line 43, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.block {
   display: block;
   padding: 5rem 0;
   position: relative;
 }
 
-/* line 47, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.block:before, .background .page .left-content .wrap-content .inner-content span.block:after {
   content: '';
   position: absolute;
@@ -141,17 +134,14 @@ ul {
   background: transparent url("../images/icon-line-white.png") no-repeat;
 }
 
-/* line 58, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.block:before {
   top: 0;
 }
 
-/* line 61, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.block:after {
   bottom: 0;
 }
 
-/* line 64, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.block span.inner-block {
   background: rgba(181, 29, 140, 0);
   background: -moz-linear-gradient(left, rgba(181, 29, 140, 0) 0%, rgba(181, 29, 140, 0.15) 37%, rgba(181, 29, 140, 0.18) 41%, rgba(181, 29, 140, 0.25) 52%, rgba(181, 29, 140, 0.18) 63%, rgba(181, 29, 140, 0.15) 68%, rgba(181, 29, 140, 0) 100%);
@@ -164,19 +154,16 @@ ul {
   display: block;
 }
 
-/* line 67, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.block span.inner-block p:first-child {
   margin-bottom: 3rem;
 }
 
-/* line 71, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .left-content .wrap-content .inner-content span.block p {
   font-size: 1.9rem;
   font-family: 'UTM Aptima';
   line-height: 2.8rem;
 }
 
-/* line 80, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content {
   width: 40%;
   float: right;
@@ -186,7 +173,6 @@ ul {
   height: 100%;
 }
 
-/* line 87, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content:after {
   content: '';
   background: rgba(255, 255, 255, 0.4);
@@ -198,7 +184,6 @@ ul {
   z-index: 2;
 }
 
-/* line 98, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content canvas.blur {
   background: url("../images/blur.png") no-repeat 100% 100%;
   position: absolute;
@@ -210,33 +195,28 @@ ul {
   opacity: 0.9;
 }
 
-/* line 108, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .logo img, .background .page .right-content p.sub-logo, .background .page .right-content .wrap-form {
   position: relative;
   z-index: 3;
 }
 
-/* line 113, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .logo img {
   margin: 0 auto 2rem;
 }
 
-/* line 117, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content p.sub-logo {
-  color: #4f4f51;
+  color: #595959;
   font-size: 1.4rem;
   font-family: 'utmavo';
   margin-bottom: 1.5rem;
   text-transform: uppercase;
 }
 
-/* line 124, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form {
   padding-top: 3rem;
   position: relative;
 }
 
-/* line 127, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form:before {
   content: '';
   width: 86px;
@@ -250,45 +230,38 @@ ul {
   position: absolute;
 }
 
-/* line 140, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form form.form-bigaroma div.form-group {
   margin-bottom: 1rem;
 }
 
-/* line 143, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form form.form-bigaroma select, .background .page .right-content .wrap-form form.form-bigaroma textarea, .background .page .right-content .wrap-form form.form-bigaroma input.input-me {
   border-radius: 10px;
   font-size: 1.4rem;
   font-family: 'utmavo';
-  color: #4f4f51;
+  color: #595959;
   text-transform: uppercase;
 }
 
-/* line 150, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form form.form-bigaroma ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #4f4f51;
+  color: #595959;
 }
 
-/* line 153, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form form.form-bigaroma ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #4f4f51;
+  color: #595959;
 }
 
-/* line 156, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form form.form-bigaroma :-ms-input-placeholder {
   /* IE 10+ */
-  color: #4f4f51;
+  color: #595959;
 }
 
-/* line 159, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form form.form-bigaroma :-moz-placeholder {
   /* Firefox 18- */
-  color: #4f4f51;
+  color: #595959;
 }
 
-/* line 162, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .page .right-content .wrap-form form.form-bigaroma input[type="submit"] {
   background: #b41d8d;
   color: white;
@@ -300,7 +273,6 @@ ul {
   border-radius: 10px;
 }
 
-/* line 177, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer {
   background: #595959;
   padding: 2rem 4rem;
@@ -308,26 +280,22 @@ ul {
   height: 14%;
 }
 
-/* line 182, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer {
   width: 30%;
   float: left;
 }
 
-/* line 185, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social {
   display: block;
   margin-bottom: 1rem;
   list-style: none;
 }
 
-/* line 189, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li {
   margin-right: 1rem;
   display: inline-block;
 }
 
-/* line 192, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me {
   display: block;
   width: 41px;
@@ -335,52 +303,42 @@ ul {
   background: url("../images/sprite-social.png") no-repeat;
 }
 
-/* line 199, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-fb {
   background-position: 0 0;
 }
 
-/* line 201, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-fb:hover {
   background-position: -41px 0px;
 }
 
-/* line 205, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-twitter {
   background-position: 0 -41px;
 }
 
-/* line 207, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-twitter:hover {
   background-position: -41px -41px;
 }
 
-/* line 211, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-googleplus {
   background-position: 0 -82px;
 }
 
-/* line 213, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-googleplus:hover {
   background-position: -41px -82px;
 }
 
-/* line 217, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-likedin {
   background-position: 0 -123px;
 }
 
-/* line 219, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li i.ic-me.ic-likedin:hover {
   background-position: -41px -123px;
 }
 
-/* line 224, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .left-footer ul.list-social li:last-child {
   margin-right: 0;
 }
 
-/* line 230, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .center-footer {
   width: 40%;
   float: left;
@@ -388,7 +346,6 @@ ul {
   color: white;
 }
 
-/* line 235, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .center-footer p.big {
   font-size: 1.6rem;
   font-family: 'utmavo';
@@ -397,32 +354,27 @@ ul {
   margin-bottom: 0.5rem;
 }
 
-/* line 242, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .center-footer p.small {
   font-size: 1.2rem;
   font-family: 'utmavo';
   margin-bottom: 0.5rem;
 }
 
-/* line 247, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .center-footer form.form-subscribe {
   max-width: 45%;
   margin: 0 auto;
 }
 
-/* line 250, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .center-footer form.form-subscribe div.input-inline {
   position: relative;
 }
 
-/* line 252, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .center-footer form.form-subscribe div.input-inline .input-me {
   border-radius: 8px;
   outline: none;
   padding: 6px 45px 6px 12px;
 }
 
-/* line 257, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .center-footer form.form-subscribe div.input-inline button.btn-me {
   background: #b41d8d;
   border-radius: 8px;
@@ -436,45 +388,15 @@ ul {
   border: none;
 }
 
-/* line 273, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .right-footer {
   width: 30%;
   float: right;
   text-align: right;
 }
 
-/* line 277, C:/xampp/htdocs/bigaroma/sass/style.scss */
 .background .footer .right-footer p.info {
   color: white;
   font-size: 1.6rem;
   font-family: 'Avenir LT Std 55 Roman';
   margin-top: 2.5rem;
-=======
-a:hover, a:focus {
-  outline: none !important;
-  text-decoration: none !important;
-}
-
-.background {
-  width: 100%;
-  height: 100%;
-  padding-bottom: 150px;
-  position: relative;
-}
-
-.background .page {
-  width: 100%;
-  height: 100%;
-  background: #B41E8E url("../image/bg.png") no-repeat;
-  background-size: cover;
-}
-
-.background .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background: #595959;
->>>>>>> origin/master
 }
