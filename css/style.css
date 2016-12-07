@@ -1,13 +1,17 @@
+<<<<<<< HEAD
 @import url(../fonts/avenir/style.css);
 @import url(../fonts/utmaptima/font.css);
 @import url(../fonts/utmaptima-bold/font.css);
 @import url(../fonts/utmavo/font.css);
 /* line 54, C:/xampp/htdocs/bigaroma/sass/_common.scss */
+=======
+>>>>>>> origin/master
 * {
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
 /* line 55, C:/xampp/htdocs/bigaroma/sass/_common.scss */
 html, body {
   width: 100%;
@@ -15,16 +19,32 @@ html, body {
 }
 
 /* line 56, C:/xampp/htdocs/bigaroma/sass/_common.scss */
+=======
+html, body {
+  width: 100;
+  height: 100%;
+}
+
+>>>>>>> origin/master
 html {
   font-size: 62.5%;
 }
 
+<<<<<<< HEAD
 /* line 57, C:/xampp/htdocs/bigaroma/sass/_common.scss */
 h2, p {
+=======
+ul {
+  list-style: none;
+}
+
+h2, h3, p {
+>>>>>>> origin/master
   margin: 0;
   padding: 0;
 }
 
+<<<<<<< HEAD
 /* line 61, C:/xampp/htdocs/bigaroma/sass/_common.scss */
 a:hover, a:focus {
   text-decoration: none !important;
@@ -429,4 +449,32 @@ ul {
   font-size: 1.6rem;
   font-family: 'Avenir LT Std 55 Roman';
   margin-top: 2.5rem;
+=======
+a:hover, a:focus {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 150px;
+  position: relative;
+}
+
+.background .page {
+  width: 100%;
+  height: 100%;
+  background: #B41E8E url("../image/bg.png") no-repeat;
+  background-size: cover;
+}
+
+.background .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: #595959;
+>>>>>>> origin/master
 }
