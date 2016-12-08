@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="js/swiper/css/swiper.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile-style.css">
 
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/swiper/js/swiper.min.js"></script>
@@ -26,7 +26,7 @@
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="main-contain">
+					<div class="main-content" id="first-slide">
 						<a href="#" class="logo"><img src="images/mobile/logo-mobile.png" class="img-responsive" alt="Bigaroma"></a>
 						<p class="sub-logo">To make an inquiry, just fill out the form below and we will get back to you as soon as possible.</p>
 						<div class="wrap-form">
@@ -61,7 +61,7 @@
 				</div> <!-- end slide 1 -->
 
 				<div class="swiper-slide">
-					<div class="main-content">
+					<div class="main-content nopadding" id="second-slide">
 						<h2 class="title-info">Challenging your senses</h2>
 						<div class="content-info">
 							<p>Beauty International Group is a Dubai holding company with major interests in the field of beauty. In particular, BIG invests in the aroma chemicals ndustry and owns several industry top brands such as ZAPHIR, CHEMAROME and PARFAROME worldwide.</p>
@@ -81,7 +81,7 @@
 				</div>	<!-- end slide 2 -->
 
 				<div class="swiper-slide">
-					<div class="main-content">
+					<div class="main-content" id="third-slide">
 						<img src="images/mobile/img-mobile.png" class="img-responsive img-news" alt="Bigaroma">
 						<div class="wrap-form-subscribe">
 							<form action="" method="POST" class="form-subscribe">
@@ -104,9 +104,10 @@
 				</div> <!-- end slide 3 -->
 			</div>
 
-			<!-- BUTTON PAGINATION -->
-			<div class="swiper-pagination"></div>
+
 		</div>
+		<!-- BUTTON PAGINATION -->
+			<div class="swiper-pagination"></div>
 
 	</div>	<!-- end bg-->
 </body>

@@ -1,0 +1,85 @@
+@import "_common";
+
+.background{
+	width:100%;
+	max-height:900px;
+	max-width:480px;
+	padding:2rem 3rem 6rem;
+	margin:0 auto;
+	background:lighten($cl-hong,10%) url('../images/mobile/bg-mobile.png')no-repeat;
+	.main-content{
+		background:rgba(255,255,255,0.7);
+		padding:1rem;
+		&.nopadding{
+			padding:0;
+		}
+		text-align:center;
+	}
+	#first-slide{
+		padding:0.5rem 5rem;
+		.logo{
+			img{
+				margin:0 auto;
+				margin-bottom:2rem;
+			}
+		}
+		p.sub-logo{
+			color:$cl-xam;
+			font-size:1.2rem;
+			@include fontAvo;
+			margin-bottom:1.5rem;
+			text-transform:uppercase;
+		}
+		div.wrap-form{
+			padding-top:3rem;
+			position:relative;
+			&:before{
+				content:'';
+				display:block;
+				width:86px;
+				height:12px;
+				background:url('../images/icon-line-pink.png')no-repeat;
+				position:absolute;
+				top:0;
+				left:50%;
+				transform:translateX(-50%);
+				-moz-transform:translateX(-50%);
+				-webkit-transform:translateX(-50%);
+			}
+			form.form-bigaroma{
+				div.form-group{
+					margin-bottom:1rem;
+				}
+				select, textarea, input.input-me{
+					border-radius:10px;
+					font-size:1.4rem;
+					@include fontAvo;
+					color:$cl-xam;
+					text-transform:uppercase;
+				}
+				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				 color:$cl-xam;
+				}
+				::-moz-placeholder { /* Firefox 19+ */
+				 color:$cl-xam;
+				}
+				:-ms-input-placeholder { /* IE 10+ */
+				 color:$cl-xam;
+				}
+				:-moz-placeholder { /* Firefox 18- */
+				 color:$cl-xam;
+				}
+				input[type="submit"]{
+					background:$cl-hong;
+					color:white;
+					padding:8px 18px;
+					border:none;
+					font-size:1.6rem;
+					text-transform:uppercase;
+					font-family: 'Avenir LT Std 95 Black';
+					border-radius:10px;
+				}
+			}
+		}
+	}
+}
