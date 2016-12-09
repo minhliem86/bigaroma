@@ -36,7 +36,7 @@ ul {
 }
 
 html, body {
-  width: 100;
+  width: 100%;
   height: 100%;
 }
 
@@ -65,16 +65,119 @@ a:hover, a:focus {
   padding: 2rem 3rem 6rem;
   margin: 0 auto;
   background: #dc28ae url("../images/mobile/bg-mobile.png") no-repeat;
+  position: relative;
+  /* DETAIL PAGE */
 }
 
 .background .main-content {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.4);
   padding: 1rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
   text-align: center;
 }
 
 .background .main-content.nopadding {
   padding: 0;
+}
+
+.background .main-content .wrap-social {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.background .main-content .wrap-social ul.list-social {
+  display: block;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.background .main-content .wrap-social ul.list-social li {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me {
+  display: block;
+  width: 41px;
+  height: 41px;
+  background: url("../images/sprite-social.png") no-repeat;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-fb {
+  background-position: 0 0;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-fb:hover {
+  background-position: -41px 0px;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-twitter {
+  background-position: 0 -41px;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-twitter:hover {
+  background-position: -41px -41px;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-googleplus {
+  background-position: 0 -82px;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-googleplus:hover {
+  background-position: -41px -82px;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-likedin {
+  background-position: 0 -123px;
+}
+
+.background .main-content .wrap-social ul.list-social li i.ic-me.ic-likedin:hover {
+  background-position: -41px -123px;
+}
+
+.background .main-content .wrap-social ul.list-social li:last-child {
+  margin-right: 0;
+}
+
+.background .swiper-container, .background .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.background .swiper-slide {
+  height: auto;
+}
+
+.background .swiper-pagination {
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: 2rem;
+}
+
+.background .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 1px solid transparent;
+  margin-right: 5px;
+  opacity: 1;
+}
+
+.background .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+
+.background .swiper-pagination .swiper-pagination-bullet-active {
+  background: #b41d8d;
+  border: 1px solid white;
 }
 
 .background #first-slide {
@@ -154,4 +257,119 @@ a:hover, a:focus {
   text-transform: uppercase;
   font-family: 'Avenir LT Std 95 Black';
   border-radius: 10px;
+}
+
+.background #second-slide h2.title-info {
+  padding: 1.5rem 0;
+  color: white;
+  background: #595959;
+  font-family: 'utmavo';
+  font-size: 2.4rem;
+}
+
+.background #second-slide .content-info {
+  padding: 1.5rem;
+}
+
+.background #second-slide .content-info p {
+  font-family: 'utmavo';
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+  line-height: 4rem;
+}
+
+.background #second-slide .content-info p:first-child {
+  margin-bottom: 2.5rem;
+}
+
+.background #second-slide .content-info a.btn-more {
+  font-family: 'utmavo';
+  font-size: 1.8rem;
+  margin: 1rem 1.8rem;
+  text-transform: uppercase;
+  display: inline-block;
+  color: white;
+}
+
+.background #third-slide .img-news {
+  margin: 0 auto 2rem;
+}
+
+.background #third-slide p.big {
+  font-size: 1.6rem;
+  font-family: 'utmavo';
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.background #third-slide p.small {
+  font-size: 1.2rem;
+  font-family: 'utmavo';
+  margin-bottom: 0.8rem;
+  color: white;
+}
+
+.background #third-slide div.wrap-form-subscribe {
+  padding-top: 4rem;
+  position: relative;
+}
+
+.background #third-slide div.wrap-form-subscribe:before {
+  content: '';
+  display: block;
+  width: 86px;
+  height: 12px;
+  background: url("../images/icon-line-pink.png") no-repeat;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+
+.background #third-slide div.wrap-form-subscribe form.form-subscribe {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline {
+  position: relative;
+}
+
+.background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline .input-me {
+  border-radius: 8px;
+  outline: none;
+  padding: 6px 45px 6px 12px;
+}
+
+.background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline button.btn-me {
+  background: #b41d8d;
+  border-radius: 8px;
+  color: white;
+  padding: 0.6rem 1rem 0.8rem;
+  max-height: 3.4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  outline: none;
+  border: none;
+}
+
+.background a.logo img {
+  margin: 0 auto 2rem;
+}
+
+.background .wrap-content {
+  color: white;
+}
+
+.background .wrap-content p {
+  font-size: 1.9rem;
+  font-family: 'utmavo';
+  line-height: 5.1rem;
+  font-weight: bold;
 }
