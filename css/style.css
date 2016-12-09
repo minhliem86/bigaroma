@@ -36,7 +36,7 @@ ul {
 }
 
 html, body {
-  width: 100;
+  width: 100%;
   height: 100%;
 }
 
@@ -109,6 +109,12 @@ a:hover, a:focus {
   margin-bottom: 3rem;
 }
 
+@media screen and (max-width: 1368px) {
+  .background .page .left-content .wrap-content .inner-content span.wrap-title {
+    padding: 0 20px 8px 20px;
+  }
+}
+
 .background .page .left-content .wrap-content .inner-content span.wrap-title h2.title {
   color: white;
   font-size: 3rem;
@@ -116,10 +122,22 @@ a:hover, a:focus {
   line-height: 3rem;
 }
 
+@media screen and (max-width: 1368px) {
+  .background .page .left-content .wrap-content .inner-content span.wrap-title h2.title {
+    font-size: 2.4rem;
+  }
+}
+
 .background .page .left-content .wrap-content .inner-content span.block {
   display: block;
   padding: 5rem 0;
   position: relative;
+}
+
+@media screen and (max-width: 1368px) {
+  .background .page .left-content .wrap-content .inner-content span.block {
+    padding: 3rem 0;
+  }
 }
 
 .background .page .left-content .wrap-content .inner-content span.block:before, .background .page .left-content .wrap-content .inner-content span.block:after {
@@ -164,6 +182,13 @@ a:hover, a:focus {
   line-height: 2.8rem;
 }
 
+@media screen and (max-width: 1368px) {
+  .background .page .left-content .wrap-content .inner-content span.block p {
+    font-size: 1.7rem;
+    line-height: 2.4rem;
+  }
+}
+
 .background .page .right-content {
   width: 40%;
   float: right;
@@ -202,6 +227,15 @@ a:hover, a:focus {
 
 .background .page .right-content .logo img {
   margin: 0 auto 2rem;
+}
+
+@media screen and (max-width: 1368px) {
+  .background .page .right-content .logo {
+    transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    display: inline-block;
+  }
 }
 
 .background .page .right-content p.sub-logo {

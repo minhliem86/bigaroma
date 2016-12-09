@@ -12,6 +12,7 @@
 			width:60%;
 			float:left;
 			height:100%;
+			
 
 			.wrap-content{
 				position:relative;
@@ -33,17 +34,26 @@
 						padding:0px 25px 10px 25px;
 						@include Bgtitle;
 						margin-bottom:3rem;
+						@media screen and (max-width:1368px) {
+							padding:0 20px 8px 20px;
+						}
 						h2.title{
 							color:white;
 							font-size:3rem;
 							@include fontaptimabold;
 							line-height:3rem;
+							@media screen and (max-width:1368px) {
+								font-size:2.4rem;
+							}
 						}
 					}
 					span.block{
 						display:block;
 						padding:5rem 0;
 						position:relative;
+						@media screen and (max-width:1368px) {
+							padding:3rem 0;
+						}
 						&:before, &:after{
 							content:'';
 							position:absolute;
@@ -72,6 +82,10 @@
 							font-size:1.9rem;
 							@include fontaptimabold;
 							line-height:2.8rem;
+							@media screen and (max-width:1368px) {
+								font-size:1.7rem;
+								line-height:2.4rem;
+							}
 						}
 					}
 				}
@@ -84,6 +98,7 @@
 			text-align:center;
 			position:relative;
 			height:100%;
+			
 			&:after{
 				content:'';
 				background:rgba(255,255,255,0.4);
@@ -113,6 +128,13 @@
 				img{
 					margin:0 auto 2rem;
 				}
+				@media screen and (max-width:1368px) {
+					transform:scale(0.8);
+					-moz-transform:scale(0.8);
+					-webkit-transform:scale(0.8);
+					display:inline-block;
+				}
+				
 			}
 			p.sub-logo{
 				color:$cl-xam;
