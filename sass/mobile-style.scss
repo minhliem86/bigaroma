@@ -1,0 +1,337 @@
+@import "_common";
+
+.background{
+	width:100%;
+	min-height:100%;
+	padding:2rem 3rem 8rem;
+	margin:0 auto;
+	background:url('../images/mobile/bg-mobile.png')no-repeat;
+	position:relative;
+	background-size:cover;
+	.swiper-container, .swiper-wrapper{
+		width:100%;
+		min-height:100%;
+		@media screen and (max-width:767px ) and (orientation: landscape){
+			height:auto;
+		}
+		@media screen and (max-width:320px ) and (orientation: portrait){
+			height:auto;
+		}
+
+	}
+	.swiper-slide{
+		height:100%;
+	}
+	.swiper-pagination{
+		left:50%;
+		transform:translateX(-50%);
+		-moz-transform:translateX(-50%);
+		-webkit-transform:translateX(-50%);
+		bottom:3rem;
+		.swiper-pagination-bullet{
+			width:12px;
+			height:12px;
+			background:white;
+			border:1px solid transparent;
+			margin-right:5px;
+			opacity:1;
+			&:last-child{
+				margin-right:0;
+			}
+		}
+		.swiper-pagination-bullet-active{
+			background:$cl-hong;
+			border:1px solid white;
+		}
+	}
+	.main-content{
+		background:rgba(255,255,255,0.4);
+		padding:1rem;
+		width:100%;
+		min-height:100%;
+		position:relative;
+		&.nopadding{
+			padding:0;
+		}
+		text-align:center;
+		.wrap-social{
+			position:absolute;
+			bottom:1.5rem;
+			left:50%;
+			transform:translateX(-50%);
+			-moz-transform:translateX(-50%);
+			-webkit-transform:translateX(-50%);
+			width:100%;
+			ul.list-social{
+				display:block;
+				margin-bottom:1rem;
+				list-style:none;
+				li{
+					margin-right:1rem;
+					display:inline-block;
+					i.ic-me{
+						display:block;
+						width:41px;
+						height:41px;
+						background:url('../images/sprite-social.png')no-repeat;
+						// @include transition(all 0.3s);
+
+						&.ic-fb{
+							background-position:0 0;
+							&:hover{
+								background-position:-41px 0px;
+							}
+						}
+						&.ic-twitter{
+							background-position:0 -41px;
+							&:hover{
+								background-position:-41px -41px;
+							}
+						}
+						&.ic-googleplus{
+							background-position:0 -82px;
+							&:hover{
+								background-position:-41px -82px;
+							}
+						}
+						&.ic-likedin{
+							background-position:0 -123px;
+							&:hover{
+								background-position:-41px -123px;
+							}
+						}
+					}
+					&:last-child{
+						margin-right:0;
+					}
+				}
+			}
+			.logo-footer{
+				img{
+					margin:0 auto;
+				}
+			}
+		}
+	}
+
+	#first-slide{
+		padding:0.5rem 3rem;
+		.logo{
+			img{
+				margin:0 auto;
+				margin-bottom:2rem;
+			}
+		}
+		p.sub-logo{
+			color:$cl-xam;
+			font-size:1.2rem;
+			@include fontbase;
+			margin-bottom:1.5rem;
+			text-transform:uppercase;
+		}
+		div.wrap-form{
+			padding-top:3rem;
+			position:relative;
+			&:before{
+				content:'';
+				display:block;
+				width:86px;
+				height:12px;
+				background:url('../images/icon-line-pink.png')no-repeat;
+				position:absolute;
+				top:0;
+				left:50%;
+				transform:translateX(-50%);
+				-moz-transform:translateX(-50%);
+				-webkit-transform:translateX(-50%);
+			}
+			form.form-bigaroma{
+				div.form-group{
+					margin-bottom:1rem;
+					position:relative;
+				}
+				select, textarea, input.input-me{
+					border-radius:10px;
+					font-size:1.4rem;
+					@include fontbase;
+					color:$cl-xam;
+					text-transform:uppercase;
+					border-radius:8px;
+				}
+				input.input-me{
+					height:2.8rem;
+					@media only screen and (min-device-width: 768px) and (max-device-width: 1024px)
+					  and (-webkit-min-device-pixel-ratio: 1) {
+						height:3.4rem;
+					}
+				}
+				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				 color:$cl-xam;
+				}
+				::-moz-placeholder { /* Firefox 19+ */
+				 color:$cl-xam;
+				}
+				:-ms-input-placeholder { /* IE 10+ */
+				 color:$cl-xam;
+				}
+				:-moz-placeholder { /* Firefox 18- */
+				 color:$cl-xam;
+				}
+				input[type="submit"]{
+					background:$cl-hong;
+					color:white;
+					padding:8px 18px;
+					border:none;
+					font-size:1.6rem;
+					text-transform:uppercase;
+					@include fontbase;
+					border-radius:10px;
+				}
+			}
+		}
+	}
+
+	#second-slide{
+		h2.title-info{
+			padding:1.5rem 0;
+			color:white;
+			background:$cl-footer;
+			@include fontbase;
+			font-size:2.4rem;
+		}
+		.content-info{
+			padding: 1.5rem;
+			p{
+				@include fontbase;
+				font-weight:bold;
+				font-size:1.6rem;
+				color:white;
+				line-height:3.3rem;
+				&:first-child{
+					margin-bottom:2.5rem;
+				}
+				@media screen and (max-width:320px ) and (orientation: portrait){
+					font-size:1.5rem;
+					line-height:3rem;
+				}
+
+
+			}
+			a.btn-more{
+				@include fontbase;
+				font-size:1.8rem;
+				margin:1rem 1.8rem;
+				text-transform:uppercase;
+				display:inline-block;
+				color:white;
+			}
+		}
+	}
+
+	#third-slide{
+		.img-news{
+			margin:0 auto 4rem;
+		}
+		p.big{
+			font-size:1.8rem;
+			@include fontbase;
+			font-weight:600;
+			text-transform:uppercase;
+			margin-bottom:0.5rem;
+			color:white;
+			@media screen and (max-width:320px ) and (orientation: portrait){
+				font-size:1.5rem;
+			}
+		}
+		p.small{
+			font-size:1.6rem;
+			@include fontbase;
+			margin-bottom:1.2rem;
+			color:white;
+			@media screen and (max-width:320px ) and (orientation: portrait){
+				font-size:1.4rem;
+			}
+		}
+		div.wrap-form-subscribe{
+			padding-top:4rem;
+			position:relative;
+			&:before{
+				content:'';
+				display:block;
+				width:86px;
+				height:12px;
+				background:url('../images/icon-line-pink.png')no-repeat;
+				position:absolute;
+				top:0;
+				left:50%;
+				transform:translateX(-50%);
+				-moz-transform:translateX(-50%);
+				-webkit-transform:translateX(-50%);
+			}
+			form.form-subscribe{
+				max-width:60%;
+				margin:0 auto;
+				@include media(480px){
+					max-width:80%;
+				}
+				div.input-inline{
+					position:relative;
+					.input-me{
+						border-radius:8px;
+						outline:none;
+						padding:6px 45px 6px 12px;
+					}
+					button.btn-me{
+						background:$cl-hong;
+						border-radius:8px;
+						color:white;
+						padding:0.6rem 1rem 0.8rem;
+						max-height:3.4rem;
+						position:absolute;
+						top:0;
+						right:0;
+						outline:none;
+						border:none;
+						@include fontbase;
+					}
+				}
+			}
+		}
+	}
+
+	/* DETAIL PAGE */
+	a.logo img{
+		margin:0 auto 2rem;
+
+	}
+	.wrap-content{
+		color:white;
+		p{
+			font-size:1.9rem;
+			@include fontbase;
+			line-height:5.1rem;
+			font-weight:bold;
+			@include media(480px){
+				font-size:1.6rem;
+				line-height:3.5rem;
+			}
+		}
+	}
+}
+ul.error-log li{
+	list-style:none;
+	margin-bottom:5px;
+	&:last-child{
+		margin:0;
+	}
+}
+p.error{
+	color:red
+}
+label.error{
+	position:absolute;
+	top:5px;
+	right:3px;
+	color:red;
+	font-size:1.1rem;
+}

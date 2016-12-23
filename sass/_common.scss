@@ -1,0 +1,71 @@
+@import "../fonts/calibri/font.css";
+
+
+@mixin fontbase{
+    font-family: 'Calibri';
+}
+
+@mixin media($width){
+    @media screen and (max-width:$width){
+        @content;
+    }
+}
+@mixin mediaheight($height){
+    @media screen and (max-height:$height){
+        @content;
+    }
+}
+
+$cl-hong:#b41d8d;
+$cl-xam:#4f4f51;
+$cl-footer:#595959;
+
+@mixin Bgtitle{
+   background: rgba(181,29,140,0.05);
+background: -moz-linear-gradient(left, rgba(181,29,140,0.05) 0%, rgba(181,29,140,0.3) 37%, rgba(181,29,140,0.42) 41%, rgba(181,29,140,0.75) 52%, rgba(181,29,140,0.44) 63%, rgba(181,29,140,0.3) 68%, rgba(181,29,140,0.05) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(181,29,140,0.05)), color-stop(37%, rgba(181,29,140,0.3)), color-stop(41%, rgba(181,29,140,0.42)), color-stop(52%, rgba(181,29,140,0.75)), color-stop(63%, rgba(181,29,140,0.44)), color-stop(68%, rgba(181,29,140,0.3)), color-stop(100%, rgba(181,29,140,0.05)));
+background: -webkit-linear-gradient(left, rgba(181,29,140,0.05) 0%, rgba(181,29,140,0.3) 37%, rgba(181,29,140,0.42) 41%, rgba(181,29,140,0.75) 52%, rgba(181,29,140,0.44) 63%, rgba(181,29,140,0.3) 68%, rgba(181,29,140,0.05) 100%);
+background: -o-linear-gradient(left, rgba(181,29,140,0.05) 0%, rgba(181,29,140,0.3) 37%, rgba(181,29,140,0.42) 41%, rgba(181,29,140,0.75) 52%, rgba(181,29,140,0.44) 63%, rgba(181,29,140,0.3) 68%, rgba(181,29,140,0.05) 100%);
+background: -ms-linear-gradient(left, rgba(181,29,140,0.05) 0%, rgba(181,29,140,0.3) 37%, rgba(181,29,140,0.42) 41%, rgba(181,29,140,0.75) 52%, rgba(181,29,140,0.44) 63%, rgba(181,29,140,0.3) 68%, rgba(181,29,140,0.05) 100%);
+background: linear-gradient(to right, rgba(181,29,140,0.05) 0%, rgba(181,29,140,0.3) 37%, rgba(181,29,140,0.42) 41%, rgba(181,29,140,0.75) 52%, rgba(181,29,140,0.44) 63%, rgba(181,29,140,0.3) 68%, rgba(181,29,140,0.05) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b51d8c', endColorstr='#b51d8c', GradientType=1 );
+}
+
+@mixin BGcontent{
+    background: rgba(181,29,140,0);
+background: -moz-linear-gradient(left, rgba(181,29,140,0) 0%, rgba(181,29,140,0.15) 37%, rgba(181,29,140,0.18) 41%, rgba(181,29,140,0.25) 52%, rgba(181,29,140,0.18) 63%, rgba(181,29,140,0.15) 68%, rgba(181,29,140,0) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(181,29,140,0)), color-stop(37%, rgba(181,29,140,0.15)), color-stop(41%, rgba(181,29,140,0.18)), color-stop(52%, rgba(181,29,140,0.25)), color-stop(63%, rgba(181,29,140,0.18)), color-stop(68%, rgba(181,29,140,0.15)), color-stop(100%, rgba(181,29,140,0)));
+background: -webkit-linear-gradient(left, rgba(181,29,140,0) 0%, rgba(181,29,140,0.15) 37%, rgba(181,29,140,0.18) 41%, rgba(181,29,140,0.25) 52%, rgba(181,29,140,0.18) 63%, rgba(181,29,140,0.15) 68%, rgba(181,29,140,0) 100%);
+background: -o-linear-gradient(left, rgba(181,29,140,0) 0%, rgba(181,29,140,0.15) 37%, rgba(181,29,140,0.18) 41%, rgba(181,29,140,0.25) 52%, rgba(181,29,140,0.18) 63%, rgba(181,29,140,0.15) 68%, rgba(181,29,140,0) 100%);
+background: -ms-linear-gradient(left, rgba(181,29,140,0) 0%, rgba(181,29,140,0.15) 37%, rgba(181,29,140,0.18) 41%, rgba(181,29,140,0.25) 52%, rgba(181,29,140,0.18) 63%, rgba(181,29,140,0.15) 68%, rgba(181,29,140,0) 100%);
+background: linear-gradient(to right, rgba(181,29,140,0) 0%, rgba(181,29,140,0.15) 37%, rgba(181,29,140,0.18) 41%, rgba(181,29,140,0.25) 52%, rgba(181,29,140,0.18) 63%, rgba(181,29,140,0.15) 68%, rgba(181,29,140,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b51d8c', endColorstr='#b51d8c', GradientType=1 );
+}
+
+@mixin media($width){
+    @media screen and (max-width:$width){
+        @content;
+    }
+}
+@mixin transition($trans...){
+    transition:$trans;
+    -moz-transition:$trans;
+    -webkit-transition:$trans;
+}
+
+*{margin:0; padding:0;}
+html, body{width:100%;height:100%;@include fontbase;}
+html{font-size:62.5%}
+h2, p {
+    margin:0;
+    padding:0;
+    @include fontbase;
+}
+a:hover, a:focus{text-decoration:none !important; outline:none;}
+ul{margin:0;}
+
+$cl-tim:#B41E8E;
+$cl-xam:#595959;
+
+
+

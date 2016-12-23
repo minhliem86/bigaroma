@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/StackBlur.js"></script>
+	<script src="js/mobiledetect.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(function() {
+			  // Change this value to adjust the amount of blur
+			  var BLUR_RADIUS = 10;
+
+			  var canvas = document.querySelector('[data-canvas]');
+			  var canvasContext = canvas.getContext('2d');
+
+			  var image = new Image();
+			  image.src = "images/blur.png";
+
+			  var drawBlur = function() {
+			    var w = canvas.width;
+			    var h = canvas.height;
+			    canvasContext.drawImage(image, 0, 0, w, h);
+			    stackBlurCanvasRGBA('heroCanvas', 0, 0, w, h, BLUR_RADIUS);
+			  };
+
+			  image.onload = function() {
+			    drawBlur();
+			  }
+			});
+
+			// var height = $(window).height();
+			// if(isMobile.any() || height < 768) {
+			//    window.location.replace("http://m.bigaroma.com");
+			// }
+		})
+	</script>
+
+	<title>Bigaroma</title>
+</head>
+<body>
+	<div class="background">
+		<div class="page clearfix">
+			<div class="left-content">
+				<div class="wrap-content">
+					<div class="inner-content">
+						<span class="wrap-title"><h2 class="title">Challenging your senses</h2></span>
+						<span class="block">
+							<span class="inner-block">
+								<p >Beauty International Group is a Dubai holding company with major interests in the field	of beauty. In particular, BIG invests in the aroma chemicals industry and owns several industry top brands such as ZAPHIR, CHEMAROME and PARFAROME worldwide. Besides, BIG holds facilities in Dubai, Barcelona, Saigon, Singapore, Jakarta, Lagos and Porto Alegre. The main production sites are located in Barcelona, Jakarta and Porto Alegre. Elsewhere, BIG operates as a trading company through its agent offices around Europe, Middle East & Asia.</p>
+								<p>BIG is lot more than a capital fund. We focus on building value for our clients as much as for our shareholders. We do not believe in short term investments or partnerships. And we certainly keep in mind that everything we do amongst our subsidiaries is meant to gain a new customer or keep an old one. Should you require any further information or assistance,	please do not hesitate to contact us.</p>
+							</span>
+						</span>
+					</div>
+				</div>
+			</div>	<!-- end left-content -->
+			<div class="right-content animated fadeInRight">
+				<canvas class="blur" data-canvas id="heroCanvas" width="200" height="200"></canvas>
+				<div class="wrap-logo">
+					<a href="#" class="logo"><img src="images/logo.png" class="img-responsive" alt="Bigaroma"></a>
+				</div>
+				<div class="wrap-transform">
+					<p class="sub-logo">To make an inquiry, just fill out the form below and we will get back to you as soon as possible.</p>
+					<div class="wrap-form">
+						<form action="" method="POST" class="form-bigaroma">
+							<div class="form-group">
+
+								<input type="text" name="name" placeholder="Name" class="input-me form-control">
+							</div>
+							<div class="form-group">
+								<input type="text" name="email" placeholder="Email" class="input-me form-control">
+							</div>
+							<div class="form-group">
+								<input type="text" name="phone" placeholder="Phone" class="input-me form-control">
+							</div>
+							<div class="form-group">
+								<select name="country" id="" class="form-control">
+									<option value="">Country</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<input type="text" name="subject" placeholder="Subject" class="input-me form-control">
+							</div>
+							<div class="form-group">
+								<textarea name="message" id="" rows="3" placeholder="Message" class="form-control"></textarea>
+							</div>
+							<div class="form-group text-center">
+								<input type="submit" class="btn btn-me" value="Submit">
+
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="footer clearfix">
+			<div class="left-footer">
+				<ul class="list-social">
+					<li><a href="#"><i class="ic-me ic-fb"></i></a></li>
+					<li><a href="#"><i class="ic-me ic-twitter"></i></a></li>
+					<li><a href="#"><i class="ic-me ic-googleplus"></i></a></li>
+					<li><a href="#"><i class="ic-me ic-likedin"></i></a></li>
+				</ul>
+				<a href="#" class="logo-footer"><img src="images/footer-logo.png" class="img-responsive" alt="Bigaroma"></a>
+			</div>
+			<div class="center-footer">
+				<p class="big">SUBSCRIBE TO OUR NEWSLETTER</p>
+				<p class="small">Join our email list for NEWS AND OFFERS</p>
+				<form action="" method="POST" class="form-subscribe">
+					<div class="input-inline">
+						<input type="text" name="email" class="input-me form-control">
+						<button type="submit" class="btn-me"><img src="images/stick-subscribe.png" alt=""></button>
+					</div>
+				</form>
+			</div>
+			<div class="right-footer">
+				<p class="info">©2016 Chemarome. All rights reserved</p>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>
