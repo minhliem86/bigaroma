@@ -312,6 +312,12 @@ ul {
   color: white;
 }
 
+@media screen and (max-width: 767px) {
+  .background #third-slide p.big {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 320px) and (orientation: portrait) {
   .background #third-slide p.big {
     font-size: 1.5rem;

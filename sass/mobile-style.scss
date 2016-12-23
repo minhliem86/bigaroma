@@ -239,6 +239,9 @@
 			text-transform:uppercase;
 			margin-bottom:0.5rem;
 			color:white;
+			@include media(767px){
+				font-size:1.5rem;
+			}
 			@media screen and (max-width:320px ) and (orientation: portrait){
 				font-size:1.5rem;
 			}
