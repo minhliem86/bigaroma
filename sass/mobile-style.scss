@@ -1,66 +1,123 @@
 @import "_common";
 
+html, body{
+    @media screen and (min-height:320px) and (orientation: landscape) {
+        height:auto;
+        min-height:100%;
+    }
+}
 .background{
 	width:100%;
-	max-height:900px;
-	max-width:480px;
-	padding:2rem 3rem 6rem;
+	height:100%;
+	padding:1.3rem;
 	margin:0 auto;
-	background:lighten($cl-hong,10%) url('../images/mobile/bg-mobile.png')no-repeat;
+	background:url('../images/mobile/bg-mobile.png')no-repeat;
+	background-size:cover;
 	position:relative;
+	@media screen and (min-width:600px) and (min-height:680px){
+		padding:2rem;
+	}
+	@media screen and (min-height:320px) and (orientation: landscape) {
+        height:auto;
+    }
 	.main-content{
-		background:rgba(255,255,255,0.4);
 		padding:1rem;
 		width:100%;
 		height:100%;
 		position:relative;
+		@media screen and (min-width:600px) and (min-height:680px){
+			padding:1.8rem;
+		}
+		&:before{
+			content:'';
+			display:block;
+			width:100%;
+			height:100%;
+			background:rgba(255,255,255,0.4);
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:1;
+			@media screen and (max-height:400px){
+				background:none
+			}
+		}
+		canvas.blur{
+			background:url('../images/blur.png')no-repeat 100% 100%;
+			position:absolute;
+			width:100%;
+			height:100%;
+			top:0;
+			left:0;
+			z-index:0;
+			opacity:0.6;
+			@media screen and (max-height:400px){
+				display:none;
+			}
+		}
+		.logo, .sub-logo, .wrap-form, .title-info, .content-info, .img-news, .wrap-form-subscribe, {
+			position:relative;
+			z-index:5;
+		}
 		&.nopadding{
 			padding:0;
 		}
 		text-align:center;
 		.wrap-social{
 			position:absolute;
-			bottom:1.5rem;
+			bottom:3.5rem;
 			left:50%;
+			width:100%;
 			transform:translateX(-50%);
 			-moz-transform:translateX(-50%);
 			-webkit-transform:translateX(-50%);
+			z-index:5;
+			@media screen and (min-height:320px) and (orientation: landscape) {
+		        position:relative;
+		        left:auto;
+		        bottom:auto;
+		        margin:2rem 0;
+				transform:none;
+				-moz-transform:none;
+				-webkit-transform:none;
+		    }
 			ul.list-social{
 				display:block;
-				margin-bottom:1rem;
+				margin-bottom:0.4rem;
 				list-style:none;
+				width:100%;
 				li{
-					margin-right:1rem;
+					margin-right:0.5rem;
 					display:inline-block;
 					i.ic-me{
 						display:block;
-						width:41px;
-						height:41px;
+						width:31px;
+						height:31px;
 						background:url('../images/sprite-social.png')no-repeat;
 						// @include transition(all 0.3s);
 
 						&.ic-fb{
 							background-position:0 0;
 							&:hover{
-								background-position:-41px 0px;
+								background-position:-31px 0px;
 							}
 						}
 						&.ic-twitter{
-							background-position:0 -41px;
+							background-position:0 -30px;
 							&:hover{
-								background-position:-41px -41px;
+								background-position:-31px -30px;
 							}
 						}
 						&.ic-googleplus{
-							background-position:0 -82px;
+							background-position:0 -60px;
 							&:hover{
-								background-position:-41px -82px;
+								background-position:-31px -60px;
 							}
 						}
 						&.ic-likedin{
-							background-position:0 -123px;
+							background-position:0 -90px;
 							&:hover{
-								background-position:-41px -123px;
+								background-position:-31px -90px;
 							}
 						}
 					}
@@ -69,21 +126,33 @@
 					}
 				}
 			}
+			a.logo-footer{
+				img{
+					max-width:16rem;
+					margin:0 auto;
+				}
+			}
 		}
 	}
-	.swiper-container, .swiper-wrapper{
+	.swiper-container, .swiper-wrapper, .swiper-slide{
 		width:100%;
 		height:100%;
+		@media screen and (min-height:320px) and (orientation: landscape) {
+	        height:auto;
+	    }
 	}
-	.swiper-slide{
-		height:auto;
-	}
+	// .swiper-slide{
+	// 	height:auto;
+	// }
 	.swiper-pagination{
 		left:50%;
 		transform:translateX(-50%);
 		-moz-transform:translateX(-50%);
 		-webkit-transform:translateX(-50%);
 		bottom:2rem;
+		@media screen and (max-height:400px){
+			bottom:5px;
+		}
 		.swiper-pagination-bullet{
 			width:12px;
 			height:12px;
@@ -101,19 +170,39 @@
 		}
 	}
 	#first-slide{
-		padding:0.5rem 5rem;
+		padding:0.5rem 2.8rem;
+		overflow-y:auto;
 		.logo{
 			img{
 				margin:0 auto;
-				margin-bottom:2rem;
+				margin-bottom:1.4rem;
+				position:relative;
+				z-index:5;
+				max-width:9rem;
+				@media screen and (min-width:600px) and (min-height:680px){
+					max-width:100%;
+					margin-bottom:2rem;
+				}
+				@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4){
+					max-width:8rem;
+					margin-bottom:1rem;
+
+				}
 			}
 		}
 		p.sub-logo{
 			color:$cl-xam;
 			font-size:1.2rem;
-			@include fontAvo;
+			@include fontbase;
 			margin-bottom:1.5rem;
 			text-transform:uppercase;
+			@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4){
+				font-size:1rem;
+
+			}
+			@media screen and (min-width:600px) and (min-height:680px){
+				font-size:1.5rem;
+			}
 		}
 		div.wrap-form{
 			padding-top:3rem;
@@ -133,14 +222,30 @@
 			}
 			form.form-bigaroma{
 				div.form-group{
-					margin-bottom:1rem;
+					margin-bottom:0.5rem;
+					@media screen and (min-width:600px) and (min-height:680px){
+						margin-bottom:1rem;
+					}
 				}
 				select, textarea, input.input-me{
-					border-radius:10px;
-					font-size:1.4rem;
-					@include fontAvo;
+					border-radius:5px;
+					font-size:1.2rem;
+					@include fontbase;
 					color:$cl-xam;
 					text-transform:uppercase;
+					padding:4px 15px;
+					height:2.5rem;
+					@media screen and (min-width:600px) and (min-height:680px){
+						font-size:1.4rem;
+						height:3.5rem;
+					}
+					@media screen and (min-width:600px) and (min-height:550px) and (-webkit-device-pixel-ratio: 4){
+						height:2.3rem;
+
+					}
+				}
+				textarea{
+					height:auto;
 				}
 				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 				 color:$cl-xam;
@@ -157,69 +262,149 @@
 				input[type="submit"]{
 					background:$cl-hong;
 					color:white;
-					padding:8px 18px;
+					padding:5px 18px;
 					border:none;
-					font-size:1.6rem;
+					font-size:1.4rem;
 					text-transform:uppercase;
-					font-family: 'Avenir LT Std 95 Black';
-					border-radius:10px;
+					@include fontbase;
+					border-radius:5px;
+				}
+			}
+		}
+		&.detail{
+			div.wrap-content{
+				position:relative;
+				z-index:5;
+				p{
+					color:$cl-xam;
+					font-size:1.4rem;
+					@include fontbase;
+					margin-bottom:1.5rem;
+					line-height:2.5rem;
+					text-transform:normal;
+					color:white;
+					@media screen and (min-width:600px) and (min-height:680px){
+						font-size:2.2rem;
+						line-height:4rem;
+					}
+					@media screen and (min-width:768px) and (min-height:680px){
+						font-size:2.2rem;
+						line-height:5rem;
+					}
 				}
 			}
 		}
 	}
 
 	#second-slide{
+		@media screen and (max-height:400px){
+			overflow-y:auto;
+		}
 		h2.title-info{
 			padding:1.5rem 0;
 			color:white;
 			background:$cl-footer;
-			@include fontAvo;
-			font-size:2.4rem;
+			@include fontbase;
+			font-size:1.5rem;
+			@media screen and (min-width:600px) and (min-height:680px){
+				font-size:2.2rem;
+			}
 		}
 		.content-info{
-			padding: 1.5rem;
+			padding: 1.3rem;
+			@media screen and (min-width:600px) and (min-height:680px){
+				padding:1.8rem 3rem;;
+			}
 			p{
-				@include fontAvo;
+				@include fontbase;
 				font-weight:bold;
-				font-size:2rem;
+				font-size:1.6rem;
 				color:white;
-				line-height:4rem;
+				line-height:2.8rem;
 				&:first-child{
 					margin-bottom:2.5rem;
 				}
+				@media screen and (min-width:600px) and (min-height:680px){
+					font-size:1.8rem;
+					line-height:4rem;
+				}
+				@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4){
+					font-size:1.3rem;
+				}
 			}
 			a.btn-more{
-				@include fontAvo;
+				@include fontbase;
 				font-size:1.8rem;
 				margin:1rem 1.8rem;
 				text-transform:uppercase;
 				display:inline-block;
 				color:white;
+				@media screen and (min-width:600px) and (min-height:680px){
+					font-size:2.5rem;
+				}
+			}
+		}
+		&.detail{
+			div.wrap-content{
+				position:relative;
+				z-index:5;
+				p{
+					color:$cl-xam;
+					font-size:1.4rem;
+					@include fontbase;
+					margin-bottom:1.5rem;
+					line-height:2.5rem;
+					text-transform:normal;
+					color:white;
+					@media screen and (min-width:600px) and (min-height:680px){
+						font-size:2.2rem;
+						line-height:4rem;
+					}
+					@media screen and (min-width:768px) and (min-height:680px){
+						font-size:2.2rem;
+						line-height:5rem;
+					}
+				}
 			}
 		}
 	}
 
 	#third-slide{
+		@media screen and (max-height:400px){
+			overflow-y:auto;
+		}
 		.img-news{
-			margin:0 auto 2rem;
+			margin:0 auto 1.3rem;
+			@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4){
+				max-width:220px;
+			}
 		}
 		p.big{
 			font-size:1.6rem;
-			@include fontAvo;
+			@include fontbase;
 			font-weight:600;
 			text-transform:uppercase;
 			margin-bottom:0.5rem;
 			color:white;
+			@media screen and (min-width:600px) and (min-height:680px){
+				font-size:1.8rem;
+			}
 		}
 		p.small{
 			font-size:1.2rem;
-			@include fontAvo;
+			@include fontbase;
 			margin-bottom:0.8rem;
 			color:white;
+			@media screen and (min-width:600px) and (min-height:680px){
+				font-size:1.4rem;
+			}
 		}
 		div.wrap-form-subscribe{
 			padding-top:4rem;
 			position:relative;
+			@media screen and (max-height:400px){
+				margin-bottom:1rem;
+			}
 			&:before{
 				content:'';
 				display:block;
@@ -239,21 +424,39 @@
 				div.input-inline{
 					position:relative;
 					.input-me{
-						border-radius:8px;
+						border-radius:5px;
 						outline:none;
-						padding:6px 45px 6px 12px;
+						padding:4px 45px 4px 12px;
+						font-size:1.4rem;
+						height:2.8rem;
+						@media screen and (min-width:600px) and (min-height:680px){
+							padding:6px 20px;
+							font-size:1.6rem;
+							height:35px;
+						}
 					}
 					button.btn-me{
 						background:$cl-hong;
-						border-radius:8px;
+						border-radius:5px;
 						color:white;
-						padding:0.6rem 1rem 0.8rem;
-						max-height:3.4rem;
+						padding:0.4rem 0.8rem;
+						max-height:2.8rem;
 						position:absolute;
 						top:0;
 						right:0;
 						outline:none;
 						border:none;
+						overflow:hidden;
+						img{
+							max-width:15px;
+						}
+						@media screen and (min-width:600px) and (min-height:680px){
+							max-height:35px;
+							padding:0.8rem 1rem;
+							img{
+								max-width:100%;
+							}
+						}
 					}
 				}
 			}
@@ -269,7 +472,7 @@
 		color:white;
 		p{
 			font-size:1.9rem;
-			@include fontAvo;
+			@include fontbase;
 			line-height:5.1rem;
 			font-weight:bold;
 		}

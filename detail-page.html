@@ -9,12 +9,36 @@
 	<link rel="stylesheet" href="css/mobile-style.css">
 
 	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/StackBlur.js"></script>
 	<script type="text/javascript" src="js/swiper/js/swiper.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
+			$(document).ready(function(){
 			var mySwiper = new Swiper('.swiper-container',{
 				pagination: '.swiper-pagination',
 			})
+			$(function() {
+			  // Change this value to adjust the amount of blur
+			  var BLUR_RADIUS = 1;
+
+			  var canvas = document.querySelector('[data-canvas]');
+			  var canvasContext = canvas.getContext('2d');
+
+			  var image = new Image();
+			  image.src = "images/blur.png";
+
+			  var drawBlur = function() {
+			    var w = canvas.width;
+			    var h = canvas.height;
+			    canvasContext.drawImage(image, 0, 0, w, h);
+			    stackBlurCanvasRGBA('heroCanvas', 0, 0, w, h, BLUR_RADIUS);
+			  };
+
+			  image.onload = function() {
+			    drawBlur();
+			  }
+			});
+		})
 		})
 	</script>
 
@@ -25,7 +49,8 @@
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-					<div class="main-content">
+					<div class="main-content detail" id="first-slide">
+						<canvas class="blur" data-canvas id="heroCanvas" width="200" height="200"></canvas>
 						<a href="#" class="logo"><img src="images/mobile/logo-mobile.png" class="img-responsive" alt=""></a>
 						<div class="wrap-content">
 							<p>Beauty International Group is a Dubai holding company with major interests in the field of beauty. In particular, BIG invests in the aroma chemicals ndustry and owns several industry top brands such as ZAPHIR, CHEMAROME and PARFAROME worldwide. Besides, BIG holds facilities in Dubai, Barcelona, Saigon, Singapore, Jakarta, Lagos and Porto Alegre. The main production sites are located in Barcelona, Jakarta and Porto Alegre.</p>
@@ -34,7 +59,8 @@
 				</div> <!-- end slide 1 -->
 
 				<div class="swiper-slide">
-					<div class="main-content">
+					<div class="main-content detail" id="second-slide">
+						<canvas class="blur" data-canvas id="heroCanvas" width="200" height="200"></canvas>
 						<div class="wrap-content">
 							<span class="block"><p>Elsewhere, BIG operates as a trading company through its agent offices around Europe, Middle East & Asia.</p></span>
 							<span class="block"><p>BIG is lot more than a capital fund. We focus on building value for our clients as much as for our shareholders. We do not believe in short term investments or partnerships. And we certainly keep in mind that everything we do amongst our subsidiaries is meant to gain a new customer or keep an old one. </p></span>

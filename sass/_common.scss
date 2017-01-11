@@ -2,7 +2,7 @@
 @import "../fonts/utmaptima/font.css";
 @import "../fonts/utmaptima-bold/font.css";
 @import "../fonts/utmavo/font.css";
-
+@import "../fonts/calibri/font.css";
 
 @mixin fontAvo{
     font-family: 'utmavo';
@@ -12,6 +12,9 @@
 }
 @mixin fontaptima{
     font-family: 'UTM Aptima';
+}
+@mixin fontbase{
+        font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 $cl-hong:#b41d8d;
@@ -65,7 +68,10 @@ $cl-tim:#B41E8E;
 $cl-xam:#595959;
 
 *{margin:0; padding:0;}
-html,body{width:100%; height:100%;}
+html,body{
+    width:100%; height:100%;
+
+}
 html{font-size:62.5%}
 
 ul{list-style:none;}

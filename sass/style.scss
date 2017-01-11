@@ -12,7 +12,7 @@
 			width:60%;
 			float:left;
 			height:100%;
-			
+
 
 			.wrap-content{
 				position:relative;
@@ -98,7 +98,7 @@
 			text-align:center;
 			position:relative;
 			height:100%;
-			
+
 			&:after{
 				content:'';
 				background:rgba(255,255,255,0.4);
@@ -134,7 +134,7 @@
 					-webkit-transform:scale(0.8);
 					display:inline-block;
 				}
-				
+
 			}
 			p.sub-logo{
 				color:$cl-xam;
@@ -213,33 +213,34 @@
 					display:inline-block;
 					i.ic-me{
 						display:block;
-						width:41px;
-						height:41px;
+						width:31px;
+						height:31px;
 						background:url('../images/sprite-social.png')no-repeat;
-						// @include transition(all 0.3s);
+						// @include transition(all 0.2s);
+
 
 						&.ic-fb{
 							background-position:0 0;
 							&:hover{
-								background-position:-41px 0px;
+								background-position:-31px 0px;
 							}
 						}
 						&.ic-twitter{
-							background-position:0 -41px;
+							background-position:0 -30px;
 							&:hover{
-								background-position:-41px -41px;
+								background-position:-31px -30px;
 							}
 						}
 						&.ic-googleplus{
-							background-position:0 -82px;
+							background-position:0 -60px;
 							&:hover{
-								background-position:-41px -82px;
+								background-position:-31px -60px;
 							}
 						}
 						&.ic-likedin{
-							background-position:0 -123px;
+							background-position:0 -90px;
 							&:hover{
-								background-position:-41px -123px;
+								background-position:-31px -90px;
 							}
 						}
 					}

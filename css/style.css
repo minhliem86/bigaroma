@@ -2,6 +2,7 @@
 @import url(../fonts/utmaptima/font.css);
 @import url(../fonts/utmaptima-bold/font.css);
 @import url(../fonts/utmavo/font.css);
+@import url(../fonts/calibri/font.css);
 * {
   margin: 0;
   padding: 0;
@@ -332,8 +333,8 @@ a:hover, a:focus {
 
 .background .footer .left-footer ul.list-social li i.ic-me {
   display: block;
-  width: 41px;
-  height: 41px;
+  width: 31px;
+  height: 31px;
   background: url("../images/sprite-social.png") no-repeat;
 }
 
@@ -342,31 +343,31 @@ a:hover, a:focus {
 }
 
 .background .footer .left-footer ul.list-social li i.ic-me.ic-fb:hover {
-  background-position: -41px 0px;
+  background-position: -31px 0px;
 }
 
 .background .footer .left-footer ul.list-social li i.ic-me.ic-twitter {
-  background-position: 0 -41px;
+  background-position: 0 -30px;
 }
 
 .background .footer .left-footer ul.list-social li i.ic-me.ic-twitter:hover {
-  background-position: -41px -41px;
+  background-position: -31px -30px;
 }
 
 .background .footer .left-footer ul.list-social li i.ic-me.ic-googleplus {
-  background-position: 0 -82px;
+  background-position: 0 -60px;
 }
 
 .background .footer .left-footer ul.list-social li i.ic-me.ic-googleplus:hover {
-  background-position: -41px -82px;
+  background-position: -31px -60px;
 }
 
 .background .footer .left-footer ul.list-social li i.ic-me.ic-likedin {
-  background-position: 0 -123px;
+  background-position: 0 -90px;
 }
 
 .background .footer .left-footer ul.list-social li i.ic-me.ic-likedin:hover {
-  background-position: -41px -123px;
+  background-position: -31px -90px;
 }
 
 .background .footer .left-footer ul.list-social li:last-child {

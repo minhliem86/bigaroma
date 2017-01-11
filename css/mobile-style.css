@@ -2,6 +2,7 @@
 @import url(../fonts/utmaptima/font.css);
 @import url(../fonts/utmaptima-bold/font.css);
 @import url(../fonts/utmavo/font.css);
+@import url(../fonts/calibri/font.css);
 * {
   margin: 0;
   padding: 0;
@@ -58,24 +59,88 @@ a:hover, a:focus {
   text-decoration: none !important;
 }
 
+@media screen and (min-height: 320px) and (orientation: landscape) {
+  html, body {
+    height: auto;
+    min-height: 100%;
+  }
+}
+
 .background {
   width: 100%;
-  max-height: 900px;
-  max-width: 480px;
-  padding: 2rem 3rem 6rem;
+  height: 100%;
+  padding: 1.3rem;
   margin: 0 auto;
-  background: #dc28ae url("../images/mobile/bg-mobile.png") no-repeat;
+  background: url("../images/mobile/bg-mobile.png") no-repeat;
+  background-size: cover;
   position: relative;
   /* DETAIL PAGE */
 }
 
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background {
+    padding: 2rem;
+  }
+}
+
+@media screen and (min-height: 320px) and (orientation: landscape) {
+  .background {
+    height: auto;
+  }
+}
+
 .background .main-content {
-  background: rgba(255, 255, 255, 0.4);
   padding: 1rem;
   width: 100%;
   height: 100%;
   position: relative;
   text-align: center;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background .main-content {
+    padding: 1.8rem;
+  }
+}
+
+.background .main-content:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media screen and (max-height: 400px) {
+  .background .main-content:before {
+    background: none;
+  }
+}
+
+.background .main-content canvas.blur {
+  background: url("../images/blur.png") no-repeat 100% 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+@media screen and (max-height: 400px) {
+  .background .main-content canvas.blur {
+    display: none;
+  }
+}
+
+.background .main-content .logo, .background .main-content .sub-logo, .background .main-content .wrap-form, .background .main-content .title-info, .background .main-content .content-info, .background .main-content .img-news, .background .main-content .wrap-form-subscribe {
+  position: relative;
+  z-index: 5;
 }
 
 .background .main-content.nopadding {
@@ -84,28 +149,43 @@ a:hover, a:focus {
 
 .background .main-content .wrap-social {
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 3.5rem;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
+  z-index: 5;
+}
+
+@media screen and (min-height: 320px) and (orientation: landscape) {
+  .background .main-content .wrap-social {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: 2rem 0;
+    transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+  }
 }
 
 .background .main-content .wrap-social ul.list-social {
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.4rem;
   list-style: none;
+  width: 100%;
 }
 
 .background .main-content .wrap-social ul.list-social li {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   display: inline-block;
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me {
   display: block;
-  width: 41px;
-  height: 41px;
+  width: 31px;
+  height: 31px;
   background: url("../images/sprite-social.png") no-repeat;
 }
 
@@ -114,44 +194,51 @@ a:hover, a:focus {
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me.ic-fb:hover {
-  background-position: -41px 0px;
+  background-position: -31px 0px;
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me.ic-twitter {
-  background-position: 0 -41px;
+  background-position: 0 -30px;
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me.ic-twitter:hover {
-  background-position: -41px -41px;
+  background-position: -31px -30px;
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me.ic-googleplus {
-  background-position: 0 -82px;
+  background-position: 0 -60px;
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me.ic-googleplus:hover {
-  background-position: -41px -82px;
+  background-position: -31px -60px;
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me.ic-likedin {
-  background-position: 0 -123px;
+  background-position: 0 -90px;
 }
 
 .background .main-content .wrap-social ul.list-social li i.ic-me.ic-likedin:hover {
-  background-position: -41px -123px;
+  background-position: -31px -90px;
 }
 
 .background .main-content .wrap-social ul.list-social li:last-child {
   margin-right: 0;
 }
 
-.background .swiper-container, .background .swiper-wrapper {
+.background .main-content .wrap-social a.logo-footer img {
+  max-width: 16rem;
+  margin: 0 auto;
+}
+
+.background .swiper-container, .background .swiper-wrapper, .background .swiper-slide {
   width: 100%;
   height: 100%;
 }
 
-.background .swiper-slide {
-  height: auto;
+@media screen and (min-height: 320px) and (orientation: landscape) {
+  .background .swiper-container, .background .swiper-wrapper, .background .swiper-slide {
+    height: auto;
+  }
 }
 
 .background .swiper-pagination {
@@ -160,6 +247,12 @@ a:hover, a:focus {
   -moz-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   bottom: 2rem;
+}
+
+@media screen and (max-height: 400px) {
+  .background .swiper-pagination {
+    bottom: 5px;
+  }
 }
 
 .background .swiper-pagination .swiper-pagination-bullet {
@@ -181,20 +274,50 @@ a:hover, a:focus {
 }
 
 .background #first-slide {
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 2.8rem;
+  overflow-y: auto;
 }
 
 .background #first-slide .logo img {
   margin: 0 auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+  z-index: 5;
+  max-width: 9rem;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #first-slide .logo img {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  .background #first-slide .logo img {
+    max-width: 8rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .background #first-slide p.sub-logo {
   color: #595959;
   font-size: 1.2rem;
-  font-family: 'utmavo';
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  .background #first-slide p.sub-logo {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #first-slide p.sub-logo {
+    font-size: 1.5rem;
+  }
 }
 
 .background #first-slide div.wrap-form {
@@ -217,15 +340,40 @@ a:hover, a:focus {
 }
 
 .background #first-slide div.wrap-form form.form-bigaroma div.form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #first-slide div.wrap-form form.form-bigaroma div.form-group {
+    margin-bottom: 1rem;
+  }
 }
 
 .background #first-slide div.wrap-form form.form-bigaroma select, .background #first-slide div.wrap-form form.form-bigaroma textarea, .background #first-slide div.wrap-form form.form-bigaroma input.input-me {
-  border-radius: 10px;
-  font-size: 1.4rem;
-  font-family: 'utmavo';
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   color: #595959;
   text-transform: uppercase;
+  padding: 4px 15px;
+  height: 2.5rem;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #first-slide div.wrap-form form.form-bigaroma select, .background #first-slide div.wrap-form form.form-bigaroma textarea, .background #first-slide div.wrap-form form.form-bigaroma input.input-me {
+    font-size: 1.4rem;
+    height: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (min-height: 550px) and (-webkit-device-pixel-ratio: 4) {
+  .background #first-slide div.wrap-form form.form-bigaroma select, .background #first-slide div.wrap-form form.form-bigaroma textarea, .background #first-slide div.wrap-form form.form-bigaroma input.input-me {
+    height: 2.3rem;
+  }
+}
+
+.background #first-slide div.wrap-form form.form-bigaroma textarea {
+  height: auto;
 }
 
 .background #first-slide div.wrap-form form.form-bigaroma ::-webkit-input-placeholder {
@@ -251,40 +399,100 @@ a:hover, a:focus {
 .background #first-slide div.wrap-form form.form-bigaroma input[type="submit"] {
   background: #b41d8d;
   color: white;
-  padding: 8px 18px;
+  padding: 5px 18px;
   border: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
-  font-family: 'Avenir LT Std 95 Black';
-  border-radius: 10px;
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  border-radius: 5px;
+}
+
+.background #first-slide.detail div.wrap-content {
+  position: relative;
+  z-index: 5;
+}
+
+.background #first-slide.detail div.wrap-content p {
+  color: #595959;
+  font-size: 1.4rem;
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 2.5rem;
+  text-transform: normal;
+  color: white;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #first-slide.detail div.wrap-content p {
+    font-size: 2.2rem;
+    line-height: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 680px) {
+  .background #first-slide.detail div.wrap-content p {
+    font-size: 2.2rem;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .background #second-slide {
+    overflow-y: auto;
+  }
 }
 
 .background #second-slide h2.title-info {
   padding: 1.5rem 0;
   color: white;
   background: #595959;
-  font-family: 'utmavo';
-  font-size: 2.4rem;
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #second-slide h2.title-info {
+    font-size: 2.2rem;
+  }
 }
 
 .background #second-slide .content-info {
-  padding: 1.5rem;
+  padding: 1.3rem;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #second-slide .content-info {
+    padding: 1.8rem 3rem;
+  }
 }
 
 .background #second-slide .content-info p {
-  font-family: 'utmavo';
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: white;
-  line-height: 4rem;
+  line-height: 2.8rem;
 }
 
 .background #second-slide .content-info p:first-child {
   margin-bottom: 2.5rem;
 }
 
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #second-slide .content-info p {
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  .background #second-slide .content-info p {
+    font-size: 1.3rem;
+  }
+}
+
 .background #second-slide .content-info a.btn-more {
-  font-family: 'utmavo';
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-size: 1.8rem;
   margin: 1rem 1.8rem;
   text-transform: uppercase;
@@ -292,29 +500,94 @@ a:hover, a:focus {
   color: white;
 }
 
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #second-slide .content-info a.btn-more {
+    font-size: 2.5rem;
+  }
+}
+
+.background #second-slide.detail div.wrap-content {
+  position: relative;
+  z-index: 5;
+}
+
+.background #second-slide.detail div.wrap-content p {
+  color: #595959;
+  font-size: 1.4rem;
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 2.5rem;
+  text-transform: normal;
+  color: white;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #second-slide.detail div.wrap-content p {
+    font-size: 2.2rem;
+    line-height: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-height: 680px) {
+  .background #second-slide.detail div.wrap-content p {
+    font-size: 2.2rem;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .background #third-slide {
+    overflow-y: auto;
+  }
+}
+
 .background #third-slide .img-news {
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.3rem;
+}
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+  .background #third-slide .img-news {
+    max-width: 220px;
+  }
 }
 
 .background #third-slide p.big {
   font-size: 1.6rem;
-  font-family: 'utmavo';
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
   color: white;
 }
 
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #third-slide p.big {
+    font-size: 1.8rem;
+  }
+}
+
 .background #third-slide p.small {
   font-size: 1.2rem;
-  font-family: 'utmavo';
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   margin-bottom: 0.8rem;
   color: white;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #third-slide p.small {
+    font-size: 1.4rem;
+  }
 }
 
 .background #third-slide div.wrap-form-subscribe {
   padding-top: 4rem;
   position: relative;
+}
+
+@media screen and (max-height: 400px) {
+  .background #third-slide div.wrap-form-subscribe {
+    margin-bottom: 1rem;
+  }
 }
 
 .background #third-slide div.wrap-form-subscribe:before {
@@ -341,22 +614,47 @@ a:hover, a:focus {
 }
 
 .background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline .input-me {
-  border-radius: 8px;
+  border-radius: 5px;
   outline: none;
-  padding: 6px 45px 6px 12px;
+  padding: 4px 45px 4px 12px;
+  font-size: 1.4rem;
+  height: 2.8rem;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline .input-me {
+    padding: 6px 20px;
+    font-size: 1.6rem;
+    height: 35px;
+  }
 }
 
 .background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline button.btn-me {
   background: #b41d8d;
-  border-radius: 8px;
+  border-radius: 5px;
   color: white;
-  padding: 0.6rem 1rem 0.8rem;
-  max-height: 3.4rem;
+  padding: 0.4rem 0.8rem;
+  max-height: 2.8rem;
   position: absolute;
   top: 0;
   right: 0;
   outline: none;
   border: none;
+  overflow: hidden;
+}
+
+.background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline button.btn-me img {
+  max-width: 15px;
+}
+
+@media screen and (min-width: 600px) and (min-height: 680px) {
+  .background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline button.btn-me {
+    max-height: 35px;
+    padding: 0.8rem 1rem;
+  }
+  .background #third-slide div.wrap-form-subscribe form.form-subscribe div.input-inline button.btn-me img {
+    max-width: 100%;
+  }
 }
 
 .background a.logo img {
@@ -369,7 +667,7 @@ a:hover, a:focus {
 
 .background .wrap-content p {
   font-size: 1.9rem;
-  font-family: 'utmavo';
+  font-family: 'Calibri', Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
   line-height: 5.1rem;
   font-weight: bold;
 }
